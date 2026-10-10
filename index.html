@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Event Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎓 Campus Event Hub</h1>
+        <p>Discover. Participate. Celebrate!</p>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Campus Fest 2026</h2>
+        <p>Explore exciting events and register for your favourites!</p>
+    </section>
+
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="Search events..." aria-label="Search events">
+        <select id="categoryFilter" aria-label="Filter by category">
+            <option value="All">All Categories</option>
+            <option value="Technical">Technical</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+        </select>
+    </section>
+
+    <main>
+        <div id="eventContainer" class="event-grid"></div>
+    </main>
+
+    <section class="registration-section" id="registrationSection">
+        <h2>Event Registration</h2>
+        <form id="registrationForm">
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName" placeholder="Enter your full name" required>
+
+            <label for="studentEmail">Email</label>
+            <input type="email" id="studentEmail" placeholder="Enter your email" required>
+
+            <label for="studentPhone">Phone Number</label>
+            <input type="tel" id="studentPhone" placeholder="10-digit phone number" required>
+
+            <label for="eventSelect">Select Event</label>
+            <select id="eventSelect" required>
+                <option value="">Choose an event</option>
+            </select>
+
+            <p id="errorMessage" class="error" role="alert"></p>
+            <button type="submit">Register Now</button>
+        </form>
+    </section>
+
+    <div id="successPopup" class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <div class="popup-content">
+            <h2 id="popupTitle">🎉 Registration Successful!</h2>
+            <p id="successMessage"></p>
+            <button id="closePopup" type="button">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Campus Event Hub</h3>
+        <p>Contact: campusfest@example.com</p>
+        <p>© 2026 Campus Fest. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
